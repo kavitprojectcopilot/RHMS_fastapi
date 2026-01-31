@@ -1,12 +1,12 @@
 from fastapi import APIRouter,status, Depends
-from .. import schemas,models
-from ..database import get_db
+from app import schemas,models
+from app.database import get_db
 from sqlalchemy.orm import Session
-from ..schemas import APIResponse
+from app.schemas import APIResponse
 from typing import List
 from fastapi.responses import JSONResponse
-from ..repository import role
-from ..oauth2 import get_current_user
+from app.repository import role
+from app.oauth2 import get_current_user
 
 router = APIRouter(
     prefix="/role",
