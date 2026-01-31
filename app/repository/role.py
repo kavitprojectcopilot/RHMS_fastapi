@@ -1,7 +1,7 @@
 from fastapi import status
-from app import schemas,models
+from .. import schemas,models
 from sqlalchemy.orm import Session
-from app.schemas import APIResponse
+from ..schemas import APIResponse
 from fastapi.responses import JSONResponse
 
 def create(request:schemas.RoleBase,db:Session):

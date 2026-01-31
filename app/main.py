@@ -1,12 +1,12 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.exceptions import RequestValidationError
-from app.exceptions.handlers import (
+from .exceptions.handlers import (
     validation_exception_handler,
     http_exception_handler
 )
-from app import models 
-from app.database import engine
-from app.routers import authentication, users, role
+from . import models 
+from .database import engine
+from .routers import authentication, users, role
 
 
 app = FastAPI()
